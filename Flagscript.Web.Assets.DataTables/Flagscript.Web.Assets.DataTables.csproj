@@ -16,6 +16,7 @@
     <IncludeSymbols>True</IncludeSymbols>
     <IncludeSource>True</IncludeSource>
     <PackageId>Flagscript.Web.Assets.DataTables</PackageId>
+    <PackageIconUrl>https://raw.githubusercontent.com/flagscript/Flagscript.Web.Assets.DataTables/master/logo-nuget.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
