@@ -2,6 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageVersion>0.1.0</PackageVersion>
+    <Authors>Flagscript</Authors>
+    <PackageLicenseUrl>https://github.com/flagscript/Flagscript.Web.Assets.DataTables/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Owners>Flagscript</Owners>
+    <PackageProjectUrl>https://github.com/flagscript/Flagscript.Web.Assets.DataTables</PackageProjectUrl>
+    <Summary>.NET Standard Library used to integrate with DataTables on the server side.</Summary>
+    <PackageTags>flagscript, datatables</PackageTags>
+    <Title>Flagscript.Web.Assets.DataTables</Title>
+    <Description>.NET Standard Library used to integrate with DataTables on the server side.</Description>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
+  </ItemGroup>
 </Project>
