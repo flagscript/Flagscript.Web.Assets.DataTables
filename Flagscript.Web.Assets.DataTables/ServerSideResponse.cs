@@ -12,11 +12,11 @@ namespace Flagscript.Web.Assets.DataTables
     /// <para>Once DataTables has made a request for data, it expects JSON data to be returned to it, with the members represented by this class set.</para>
     /// <para>View the DataTables documentation at <see cref="!:https://datatables.net/manual/server-side"/></para>
     /// </remarks>
-    /// <typeparam name="T">The datatype of each Datatables.Net result row.</typeparam>
-    [JsonObject]
-    public class ServerSideResult<T>
+    /// <typeparam name="T">The class of each Datatables.Net result row.</typeparam>
+    [JsonObject(MemberSerialization.OptIn)]
+    public class ServerSideResponse<T> where T : class
     {
-
+        
         /// <summary>
         /// Array of data to be displayed in the data table.
         /// </summary>
@@ -55,7 +55,7 @@ namespace Flagscript.Web.Assets.DataTables
         /// error message to be displayed using this parameter. Do not include if there is no error.
         /// </remarks>
         /// <value>Error encountered during the service side processing..</value>
-        [JsonProperty("error")]
+        [JsonProperty("error", NullValueHandling = NullValueHandling.Ignore)]
         public string Error { get; set; }
 
         /// <summary>
@@ -77,6 +77,30 @@ namespace Flagscript.Web.Assets.DataTables
         /// <value>Total records, after filtering.</value>
         [JsonProperty("recordsFiltered")]
         public int RecordsFiltered { get; set; }
+
+        /// <summary>
+        /// Row class to add to every <c><tr /></c> tag.
+        /// </summary>
+        /// <value>Row class to add every <c><tr /></c> tag.</value>
+        public string GlobalRowClass { get; private set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Flagscript.Web.Assets.DataTables.ServerSideResponse`1"/> class with default settings.
+        /// </summary>
+        public ServerSideResponse()
+        {
+            
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:Flagscript.Web.Assets.DataTables.ServerSideResponse`1"/> class with specified settings.
+        /// </summary>
+        /// <param name="globalRowClass">Optional global Row class to add to every <c><tr /></c> tag.</param>
+        public ServerSideResponse(string globalRowClass = null)
+        {
+            GlobalRowClass = globalRowClass;
+        }
+
 
     }
 
