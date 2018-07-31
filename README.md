@@ -16,7 +16,23 @@ The ability to target .NET Standard 2.0.
 
 ### Installing
 
-Coming soon.
+#### NUGET.EXE
+
+```
+nuget.exe install Flagscript.Web.Assets.DataTables -Version 1.0.0 -Source https://www.myget.org/F/flagscript/api/v3/index.json
+```
+
+#### .NET CLI
+
+```
+dotnet add package Flagscript.Web.Assets.DataTables --version 1.0.0 --source https://www.myget.org/F/flagscript/api/v3/index.json
+```
+
+#### .CSPROJ
+
+```
+<PackageReference Include="Flagscript.Web.Assets.DataTables" Version="1.0.0" />
+```
 
 ## Contributing
 
