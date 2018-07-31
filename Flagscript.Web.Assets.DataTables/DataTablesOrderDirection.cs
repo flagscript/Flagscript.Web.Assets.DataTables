@@ -2,9 +2,9 @@
 {
 
     /// <summary>
-    /// Represents the sort order of a DataTables column.
+    /// Represents the sort order of a <see cref="DataTablesColumn"/>.
     /// </summary>
-    public enum OrderDirection
+    public enum DataTablesOrderDirection
     {
 
         /// <summary>

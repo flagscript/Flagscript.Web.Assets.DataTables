@@ -4,16 +4,16 @@ namespace Flagscript.Web.Assets.DataTables
 {
 
     /// <summary>
-    /// Indicates how a <see cref="ServerSideResult{T}.Data"/> response should be queried and ordered.
+    /// Indicates how a <see cref="DataTablesServerSideResponse{T}.Data"/> response should be queried and ordered.
     /// </summary>
-    public class ColumnOrder
-    {
+    public class DataTablesColumnOrder
+	{
 
         /// <summary>
         /// Column to which ordering should be applied.
         /// </summary>
         /// <remarks>
-        /// This is an index reference to the <see cref="ServerSideRequest.Order"/> array of information that is also submitted to the server.
+        /// This is an index reference to the <see cref="DataTablesServerSideRequest.Order"/> array of information that is also submitted to the server.
         /// </remarks>
         /// <value>Column to which ordering should be applied.</value>
         [JsonProperty("column")]
@@ -27,7 +27,7 @@ namespace Flagscript.Web.Assets.DataTables
         /// </remarks>
         /// <value>Ordering direction for this column.</value>
         [JsonProperty("order")]
-        public ColumnOrder Order { get; set; }
+        public DataTablesOrderDirection Order { get; set; }
 
     }
 

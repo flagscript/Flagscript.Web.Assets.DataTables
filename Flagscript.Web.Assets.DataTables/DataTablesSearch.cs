@@ -4,11 +4,11 @@ namespace Flagscript.Web.Assets.DataTables
 {
 
     /// <summary>
-    /// Indicates how a <see cref="ServerSideRequest"/>'s search value should be handled for server side processing.
+    /// Indicates how a <see cref="DataTablesServerSideRequest"/>'s search value should be handled for server side processing.
     /// </summary>
     [JsonObject]
-    public class Search
-    {
+    public class DataTablesSearch
+	{
 
         /// <summary>
         /// Whether or not <see cref="Value"/> should be treated as a regular expression for advanced searching.

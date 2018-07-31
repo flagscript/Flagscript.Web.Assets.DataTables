@@ -5,16 +5,16 @@ using Newtonsoft.Json;
 namespace Flagscript.Web.Assets.DataTables
 {
 
-    /// <summary>
-    /// Resents a valid JSON response to a DataTables server side processing request.
-    /// </summary>
-    /// <remarks>
-    /// <para>Once DataTables has made a request for data, it expects JSON data to be returned to it, with the members represented by this class set.</para>
-    /// <para>View the DataTables documentation at <see cref="!:https://datatables.net/manual/server-side"/></para>
-    /// </remarks>
-    /// <typeparam name="T">The class of each Datatables.Net result row.</typeparam>
-    [JsonObject(MemberSerialization.OptIn)]
-    public class ServerSideResponse<T> where T : class
+	/// <summary>
+	/// Resents a valid JSON response to a DataTables server side processing request.
+	/// </summary>
+	/// <remarks>
+	/// <para>Once DataTables has made a request for data, it expects JSON data to be returned to it, with the members represented by this class set.</para>
+	/// <para>View the DataTables documentation at <see cref="!:https://datatables.net/manual/server-side"/></para>
+	/// </remarks>
+	/// <typeparam name="T">The class of the Datatables result rows, inheriting <see cref="DataTablesRow"/>.</typeparam>
+	[JsonObject(MemberSerialization.OptIn)]
+    public class DataTablesServerSideResponse<T> where T : DataTablesRow
     {
         
         /// <summary>
@@ -84,19 +84,19 @@ namespace Flagscript.Web.Assets.DataTables
         /// <value>Row class to add every <c><tr /></c> tag.</value>
         public string GlobalRowClass { get; private set; }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="T:Flagscript.Web.Assets.DataTables.ServerSideResponse`1"/> class with default settings.
-        /// </summary>
-        public ServerSideResponse()
+		/// <summary>
+		/// Initializes a new instance of the <see cref="DataTablesServerSideResponse{T}"/> class with default settings.
+		/// </summary>
+		public DataTablesServerSideResponse()
         {
             
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="T:Flagscript.Web.Assets.DataTables.ServerSideResponse`1"/> class with specified settings.
-        /// </summary>
-        /// <param name="globalRowClass">Optional global Row class to add to every <c><tr /></c> tag.</param>
-        public ServerSideResponse(string globalRowClass = null)
+		/// <summary>
+		/// Initializes a new instance of the <see cref="DataTablesServerSideResponse{T}"/> class with specified settings.
+		/// </summary>
+		/// <param name="globalRowClass">Optional global Row class to add to every <c><tr /></c> tag.</param>
+		public DataTablesServerSideResponse(string globalRowClass = null)
         {
             GlobalRowClass = globalRowClass;
         }

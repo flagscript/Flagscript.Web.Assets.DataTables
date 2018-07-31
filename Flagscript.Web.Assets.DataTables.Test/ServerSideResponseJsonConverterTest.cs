@@ -3,8 +3,6 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 
-using Flagscript.Web.Assets.DataTables;
-
 namespace Flagscript.Web.Assets.DataTables.Test
 {
     
@@ -18,7 +16,7 @@ namespace Flagscript.Web.Assets.DataTables.Test
 
             Console.WriteLine("Running Test");
 
-            ServerSideResponse<TestJsonClass> response = new ServerSideResponse<TestJsonClass>()
+            DataTablesServerSideResponse<TestJsonClass> response = new DataTablesServerSideResponse<TestJsonClass>()
             {
                 Draw = 2,
                 RecordsTotal = 23,
@@ -33,7 +31,7 @@ namespace Flagscript.Web.Assets.DataTables.Test
     }
 
     [JsonObject]
-    public class TestJsonClass
+    public class TestJsonClass : DataTablesRow
     {
 
         [JsonProperty("firstName")]

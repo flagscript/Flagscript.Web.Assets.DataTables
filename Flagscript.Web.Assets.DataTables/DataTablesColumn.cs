@@ -6,7 +6,8 @@ namespace Flagscript.Web.Assets.DataTables
     /// <summary>
     /// Column.
     /// </summary>
-    public class Column
+	[JsonObject]
+    public class DataTablesColumn
     {
 
         /// <summary>
@@ -36,7 +37,7 @@ namespace Flagscript.Web.Assets.DataTables
         /// </summary>
         /// <value>Specific search value for this column.</value>
         [JsonProperty("search")]
-        public Search Search { get; set; }
+        public DataTablesSearch Search { get; set; }
 
         /// <summary>
         /// Flag to indicate if this column is searchable (<c>true</c>) or not (<c>false</c>).

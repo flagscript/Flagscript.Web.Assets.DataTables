@@ -8,7 +8,7 @@ namespace Flagscript.Web.Assets.DataTables
     /// <summary>
     /// Server side request.
     /// </summary>
-    public class ServerSideRequest
+    public class DataTablesServerSideRequest
     {
 
         /// <summary>
@@ -20,7 +20,7 @@ namespace Flagscript.Web.Assets.DataTables
         /// (Ajax requests are asynchronous and thus can return out of sequence).
         /// </para>
         /// <para>
-        /// This is used as part of the <see cref="ServerSideResult{T}.Draw"/> return parameter.
+        /// This is used as part of the <see cref="DataTablesServerSideResponse{T}.Draw"/> return parameter.
         /// </para>
         /// </remarks>
         /// <value>Draw counter.</value>
@@ -46,14 +46,14 @@ namespace Flagscript.Web.Assets.DataTables
         /// </remarks>
         /// <value>An array defining how many columns are being ordered upon.</value>
         [JsonProperty("order")]
-        public ColumnOrder[] Order { get; set; }
+        public DataTablesColumnOrder[] Order { get; set; }
 
         /// <summary>
         /// How the results in <see cref="ServerSideResult{T}"/> should be filtered for user search.
         /// </summary>
         /// <value>How the results in <see cref="ServerSideResult{T}"/> should be filtered for user search.</value>
         [JsonProperty("search")]
-        public Search Search { get; set; }
+        public DataTablesSearch Search { get; set; }
 
         /// <summary>
         /// Paging first record indicator.
