@@ -13,6 +13,8 @@
     <PackageTags>flagscript, datatables</PackageTags>
     <Title>Flagscript.Web.Assets.DataTables</Title>
     <Description>.NET Standard Library used to integrate with DataTables on the server side.</Description>
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
   </PropertyGroup>
 
   <ItemGroup>
