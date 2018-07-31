@@ -15,6 +15,7 @@
     <Description>.NET Standard Library used to integrate with DataTables on the server side.</Description>
     <IncludeSymbols>True</IncludeSymbols>
     <IncludeSource>True</IncludeSource>
+    <PackageId>Flagscript.Web.Assets.DataTables</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
