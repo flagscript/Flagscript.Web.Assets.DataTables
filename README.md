@@ -4,7 +4,7 @@ A .NET Standard Library to work with DataTables requests in .NET applications.
 
 ## Build Status
 [![flagscript MyGet Build Status](https://www.myget.org/BuildSource/Badge/flagscript?identifier=71873cce-9dd9-4022-be84-5fdc08303021)](https://www.myget.org/)
-[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
+[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/flagscript/Flagscript.Web.Assets.DataTables/blob/master/LICENSE.md)
 
 ## Getting Started
 
