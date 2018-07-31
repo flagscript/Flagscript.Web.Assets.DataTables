@@ -4,6 +4,7 @@ A .NET Standard Library to work with DataTables requests in .NET applications.
 
 ## Build Status
 [![flagscript MyGet Build Status](https://www.myget.org/BuildSource/Badge/flagscript?identifier=71873cce-9dd9-4022-be84-5fdc08303021)](https://www.myget.org/)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
 ## Getting Started
 
@@ -27,7 +28,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Greg Kaestle** - *Initial work* - [Flagscript](https://github.com/Flagscript)
+* **Greg Kaestle** - *Creator* - [Flagscript](https://github.com/Flagscript)
 
 ## License
 
