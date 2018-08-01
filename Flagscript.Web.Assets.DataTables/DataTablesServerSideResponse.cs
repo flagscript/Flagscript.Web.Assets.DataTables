@@ -85,6 +85,12 @@ namespace Flagscript.Web.Assets.DataTables
         public string GlobalRowClass { get; private set; }
 
 		/// <summary>
+		/// Whether or not to use object notion for the array response.
+		/// </summary>
+		/// <value>Whether or not to use object notion for the array response.</value>
+		public bool UseObjectDataSource { get; private set; }
+
+		/// <summary>
 		/// Initializes a new instance of the <see cref="DataTablesServerSideResponse{T}"/> class with default settings.
 		/// </summary>
 		public DataTablesServerSideResponse()
@@ -95,8 +101,9 @@ namespace Flagscript.Web.Assets.DataTables
 		/// <summary>
 		/// Initializes a new instance of the <see cref="DataTablesServerSideResponse{T}"/> class with specified settings.
 		/// </summary>
+		/// <param name="useObjectDataSource">Whether or not to use object notion for the array response.</param>
 		/// <param name="globalRowClass">Optional global Row class to add to every <c><tr /></c> tag.</param>
-		public DataTablesServerSideResponse(string globalRowClass = null)
+		public DataTablesServerSideResponse(bool useObjectDataSource = false, string globalRowClass = null)
         {
             GlobalRowClass = globalRowClass;
         }
